@@ -19,7 +19,7 @@ int main()
 	printf("\n Enter COM-PORT(only number) : ");
 	scanf("%d", &givenCOM);
 
-	// asking COM port number:
+	// asking COM port bitrate number:
 	printf("\n Enter COM-Bitrate(only number, default=9600) : ");
 	scanf("%d", &givenBitrate);
 
@@ -48,6 +48,7 @@ int main()
 	if (hCOM == INVALID_HANDLE_VALUE)
 	{
 		showError("Error - can not open COM by given COM-port");
+		return -100;
 	}
 	else
 	{
